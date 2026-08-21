@@ -398,19 +398,24 @@ body.theme-light {
     border-bottom-color: rgba(15, 23, 42, 0.1);
   }
 
-  .brand, .nav-links a {
+  .brand,
+  .nav-links a {
     color: #435b78;
   }
 
-  .brand small, .text-soft {
+  .brand small,
+  .text-soft {
     color: #667f9c;
   }
 
-  .hero-copy, .section-lead, .link-desc {
+  .hero-copy,
+  .section-lead,
+  .link-desc {
     color: #5f728b;
   }
 
-  .link-item, .social-link {
+  .link-item,
+  .social-link {
     background: rgba(255, 255, 255, 0.95);
     border-color: rgba(30, 41, 59, 0.12);
     color: #10213b;
@@ -421,7 +426,8 @@ body.theme-light {
     }
   }
 
-  .hero-kicker, .fact .label {
+  .hero-kicker,
+  .fact .label {
     color: #0ea5e9;
   }
 
