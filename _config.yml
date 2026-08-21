@@ -1,0 +1,86 @@
+#
+# This file contains configuration flags to customize your site
+#
+
+# Name of your site (displayed in the header)
+name: Your Name Here
+
+# Short bio or description (displayed in the header)
+description: Welcome to my personal portfolio
+
+# URL of your avatar or profile pic
+avatar: https://avatars.githubusercontent.com/u/319210990?v=4
+
+# Includes an icon in the footer for each username you enter
+footer-links:
+  dribbble:
+  email: your.email@example.com
+  facebook:
+  flickr:
+  github: pkhatiwoda47
+  instagram:
+  linkedin: 
+  rss:
+  twitter:
+  youtube:
+
+# Disqus shortname
+disqus:
+
+# Google Analytics
+google_analytics:
+
+# Your website URL
+url:
+
+# Baseurl for project pages
+baseurl: ""
+
+# Jekyll configuration
+permalink: /:categories/:title/
+version: v1.0.0
+
+# Markdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+
+# Sass
+sass:
+  style: :expanded
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+
+# Exclude files
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - CNAME
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+
+# Defaults
+defaults:
+  -
+    scope:
+      path: ''
+      type: pages
+    values:
+      layout: page
+  -
+    scope:
+      path: '_posts'
+      type: posts
+    values:
+      layout: post

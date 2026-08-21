@@ -1,0 +1,148 @@
+---
+layout: null
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ site.name }} | {{ site.description }}</title>
+    <meta name="description" content="{{ site.description }}" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container header-inner">
+        <a class="brand" href="#home">
+          {{ site.name }}
+          <small>{{ site.description }}</small>
+        </a>
+
+        <nav class="nav-links">
+          <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Switch theme">Light</button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- Hero Section -->
+      <section class="hero" id="home">
+        <div>
+          <p class="hero-kicker">Welcome</p>
+          <h1>Hello! 👋</h1>
+          <p class="hero-copy">
+            Thanks for visiting. I'm excited to share my work, ideas, and projects with you. 
+            This is my digital home where I showcase my interests and creations.
+          </p>
+        </div>
+        <div class="hero-card">
+          <div class="facts">
+            <div class="fact">
+              <span class="label">About</span>
+              <span class="value">Your brief intro here</span>
+            </div>
+            <div class="fact">
+              <span class="label">Focus</span>
+              <span class="value">Your main interest or expertise</span>
+            </div>
+            <div class="fact">
+              <span class="label">Location</span>
+              <span class="value">Your location</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Links Section -->
+      <section id="links">
+        <h2 class="section-title">Find My Work</h2>
+        <p class="section-lead">Explore my projects, writing, and online presence</p>
+        <div class="link-grid">
+          <a class="link-item" href="#" target="_blank" rel="noopener noreferrer">
+            <span class="link-left">
+              <span class="link-main">
+                <span class="link-title">GitHub</span>
+                <span class="link-desc">My code and projects</span>
+              </span>
+            </span>
+            <span class="link-arrow">→</span>
+          </a>
+          <a class="link-item" href="#" target="_blank" rel="noopener noreferrer">
+            <span class="link-left">
+              <span class="link-main">
+                <span class="link-title">LinkedIn</span>
+                <span class="link-desc">Professional profile</span>
+              </span>
+            </span>
+            <span class="link-arrow">→</span>
+          </a>
+          <a class="link-item" href="#" target="_blank" rel="noopener noreferrer">
+            <span class="link-left">
+              <span class="link-main">
+                <span class="link-title">Portfolio</span>
+                <span class="link-desc">My featured work</span>
+              </span>
+            </span>
+            <span class="link-arrow">→</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Social Section -->
+      <section id="social">
+        <h2 class="section-title">Connect With Me</h2>
+        <div class="social-grid">
+          <a class="social-link" href="https://github.com/pkhatiwoda47" aria-label="GitHub">
+            <span>GitHub</span>
+          </a>
+          <a class="social-link" href="#" aria-label="LinkedIn">
+            <span>LinkedIn</span>
+          </a>
+          <a class="social-link" href="mailto:your.email@example.com" aria-label="Email">
+            <span>Email</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; {{ site.time | date: '%Y' }} {{ site.name }}. All rights reserved.</p>
+    </footer>
+
+    <script>
+      (function () {
+        var storageKey = "site-theme";
+        var themeToggle = document.getElementById("theme-toggle");
+
+        function applyTheme(theme) {
+          var isLight = theme === "light";
+          document.body.classList.toggle("theme-light", isLight);
+          if (themeToggle) {
+            themeToggle.textContent = isLight ? "Dark" : "Light";
+            themeToggle.setAttribute("aria-label", isLight ? "Switch to dark theme" : "Switch to light theme");
+          }
+        }
+
+        var savedTheme = "dark";
+        try {
+          savedTheme = localStorage.getItem(storageKey) || "dark";
+        } catch (e) {
+          savedTheme = "dark";
+        }
+        applyTheme(savedTheme);
+
+        if (themeToggle) {
+          themeToggle.addEventListener("click", function () {
+            var nextTheme = document.body.classList.contains("theme-light") ? "dark" : "light";
+            try {
+              localStorage.setItem(storageKey, nextTheme);
+            } catch (e) {}
+            applyTheme(nextTheme);
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>

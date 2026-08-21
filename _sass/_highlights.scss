@@ -1,0 +1,32 @@
+// Syntax highlighting colors
+
+.highlight {
+  background: rgba(12, 20, 31, 0.92);
+  border: 1px solid rgba(126, 146, 170, 0.24);
+  border-radius: 8px;
+  padding: 12px;
+  overflow-x: auto;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #d4d4d4;
+
+  .c { color: #6a9955; } // Comment
+  .s { color: #ce9178; } // String
+  .n { color: #9cdcfe; } // Name
+  .m { color: #b5cea8; } // Number
+  .k { color: #569cd6; } // Keyword
+  .p { color: #d4d4d4; } // Punctuation
+}
+
+body.theme-light .highlight {
+  background: #f5f5f5;
+  border-color: #e0e0e0;
+  color: #383a42;
+
+  .c { color: #a0a1a7; }
+  .s { color: #50a14f; }
+  .n { color: #4078f2; }
+  .m { color: #986801; }
+  .k { color: #a626a4; }
+  .p { color: #383a42; }
+}

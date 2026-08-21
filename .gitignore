@@ -1,0 +1,19 @@
+# Jekyll
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# Dependencies
+Gemfile.lock
+vendor/
+
+# Local development
+.DS_Store
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Build
+*.map
